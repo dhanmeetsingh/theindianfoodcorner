@@ -1,5 +1,6 @@
+import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,17 +10,19 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-secondary-gold/20 flex items-center justify-center">
-                <svg className="w-6 h-6 text-secondary-gold" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
-                </svg>
+              <div className="w-10 h-10 rounded-full overflow-hidden bg-secondary-gold/20 flex items-center justify-center">
+                <img 
+                  src="/logo.png" 
+                  alt="The Indian Food Corner Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-heading text-xl font-bold text-text-light">
-                SPICE<span className="text-secondary-gold">CRAFT</span>
+                THE INDIAN <span className="text-secondary-gold">FOOD CORNER</span>
               </span>
             </div>
             <p className="text-text-muted mb-4">
-              Experience the rich flavors of India in every bite. Traditional recipes, modern elegance.
+              Erleben Sie die reichen Aromen Indiens in jedem Bissen. Traditionelle Rezepte, moderne Eleganz.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold hover:bg-secondary-gold hover:text-bg-dark transition-all">
@@ -36,7 +39,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg mb-4 text-text-light">Quick Links</h4>
+            <h4 className="font-heading text-lg mb-4 text-text-light">Schnellzugriff</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-text-muted hover:text-secondary-gold transition-colors">
@@ -45,22 +48,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/about" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  Our Story
+                  Unsere Geschichte
                 </Link>
               </li>
               <li>
                 <Link to="/menu" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  Menu
+                  Speisekarte
                 </Link>
               </li>
               <li>
-                <Link to="/reservations" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  Reservations
+                <Link to="/gallery" className="text-text-muted hover:text-secondary-gold transition-colors">
+                  Galerie
                 </Link>
               </li>
               <li>
-                <Link to="/order" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  Order Online
+                <Link to="/contact" className="text-text-muted hover:text-secondary-gold transition-colors">
+                  Kontakt
                 </Link>
               </li>
             </ul>
@@ -68,24 +71,24 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading text-lg mb-4 text-text-light">Contact Us</h4>
+            <h4 className="font-heading text-lg mb-4 text-text-light">Kontakt</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-secondary-gold mt-0.5 flex-shrink-0" />
                 <span className="text-text-muted">
-                  123 Spice Street<br />Stuttgart, 70173<br />Germany
+                  Schwieberdinger Str. 37<br />70435 Stuttgart<br />Deutschland
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-secondary-gold flex-shrink-0" />
-                <a href="tel:+4917212345678" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  +49 172 123 4567
+                <a href="tel:+49723894934" className="text-text-muted hover:text-secondary-gold transition-colors">
+                  +49 723 894 934
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-secondary-gold flex-shrink-0" />
-                <a href="mailto:info@spicecraft.de" className="text-text-muted hover:text-secondary-gold transition-colors">
-                  info@spicecraft.de
+                <a href="mailto:info@indianfoodcorner.de" className="text-text-muted hover:text-secondary-gold transition-colors">
+                  info@indianfoodcorner.de
                 </a>
               </li>
             </ul>
@@ -93,18 +96,18 @@ export default function Footer() {
 
           {/* Opening Hours */}
           <div>
-            <h4 className="font-heading text-lg mb-4 text-text-light">Opening Hours</h4>
+            <h4 className="font-heading text-lg mb-4 text-text-light">Öffnungszeiten</h4>
             <ul className="space-y-2 text-text-muted">
               <li className="flex justify-between">
-                <span>Monday - Friday</span>
+                <span>Mo - Fr</span>
                 <span>11:00 - 23:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Saturday</span>
+                <span>Samstag</span>
                 <span>12:00 - 00:00</span>
               </li>
               <li className="flex justify-between">
-                <span>Sunday</span>
+                <span>Sonntag</span>
                 <span>12:00 - 22:00</span>
               </li>
             </ul>
@@ -114,17 +117,17 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-secondary-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-text-muted text-sm">
-            © 2026 SpiceCraft Restaurant. All rights reserved.
+            © 2026 The Indian Food Corner. Alle Rechte vorbehalten.
           </p>
           <div className="flex space-x-6 text-sm">
             <a href="#" className="text-text-muted hover:text-secondary-gold transition-colors">
-              Privacy Policy
+              Datenschutz
             </a>
             <a href="#" className="text-text-muted hover:text-secondary-gold transition-colors">
-              Terms of Service
+              Nutzungsbedingungen
             </a>
             <a href="#" className="text-text-muted hover:text-secondary-gold transition-colors">
-              Cookie Policy
+              Impressum
             </a>
           </div>
         </div>

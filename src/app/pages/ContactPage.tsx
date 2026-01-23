@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { ChevronDown, Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Clock, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 const faqs = [
   { q: 'Do you offer catering?', a: 'Yes! We provide catering services for events of all sizes. Contact us for a custom quote.' },
@@ -93,14 +94,14 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 text-secondary-gold mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-text-light font-medium mb-1">Address</p>
-                    <p className="text-text-muted">123 Spice Street<br />Stuttgart, 70173<br />Germany</p>
+                    <p className="text-text-muted">Schwieberdinger Str. 37<br />Stuttgart, 70435<br />Deutschland</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="w-6 h-6 text-secondary-gold mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-text-light font-medium mb-1">Phone</p>
-                    <a href="tel:+4917212345678" className="text-text-muted hover:text-secondary-gold transition-colors">+49 172 123 4567</a>
+                    <a href="tel:+4917212345678" className="text-text-muted hover:text-secondary-gold transition-colors">+49 172 389 4934</a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

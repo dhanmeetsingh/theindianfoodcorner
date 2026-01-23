@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { Filter, Search } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Search, Filter } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 const menuItems = [
   { id: 1, name: 'Butter Chicken', category: 'Curries', price: 14.90, spiceLevel: 2, veg: false, popular: true, image: 'https://images.unsplash.com/photo-1714799263303-29e7d638578a?w=400' },

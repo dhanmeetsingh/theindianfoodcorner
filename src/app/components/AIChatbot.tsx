@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { MessageCircle, Send, Sparkles, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'motion/react';
+import React, { useState } from 'react';
 
 interface Message {
   id: number;

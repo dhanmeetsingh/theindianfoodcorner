@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-import AIChatbot from './components/AIChatbot';
-import HomePage from './pages/HomePage';
-import MenuPage from './pages/MenuPage';
-import ReservationsPage from './pages/ReservationsPage';
-import GalleryPage from './pages/GalleryPage';
+import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
 import OrderOnlinePage from './pages/OrderOnlinePage';
+import ReservationsPage from './pages/ReservationsPage';
+
 
 export default function App() {
   return (
@@ -27,7 +28,6 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
-        <AIChatbot />
       </div>
     </Router>
   );

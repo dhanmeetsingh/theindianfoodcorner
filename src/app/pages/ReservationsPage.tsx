@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { Calendar, CheckCircle, Clock, Users } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Calendar, Clock, Users, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 export default function ReservationsPage() {
   const [formData, setFormData] = useState({
@@ -164,7 +165,7 @@ export default function ReservationsPage() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-4 py-3 bg-bg-dark rounded-xl text-text-light focus:outline-none focus:ring-2 focus:ring-secondary-gold"
-                  placeholder="+49 172 123 4567"
+                  placeholder="+49 172 389 4934"
                 />
               </div>
 
@@ -188,7 +189,7 @@ export default function ReservationsPage() {
             </button>
 
             <p className="text-center text-text-muted text-sm mt-4">
-              Or call us at <a href="tel:+4917212345678" className="text-secondary-gold hover:underline">+49 172 123 4567</a>
+              Or call us at <a href="tel:+4917212345678" className="text-secondary-gold hover:underline">+49 172 389 4934</a>
             </p>
           </motion.form>
 

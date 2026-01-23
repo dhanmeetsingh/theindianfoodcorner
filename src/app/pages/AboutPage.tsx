@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import React from 'react';
+
 
 const milestones = [
   { year: '2020', title: 'The Beginning', desc: 'Started with family recipes in a small kitchen' },

@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { Minus, Plus, ShoppingCart, Truck, X } from 'lucide-react';
 import { motion } from 'motion/react';
-import { ShoppingCart, Plus, Minus, X, Truck, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 const menuItems = [
   { id: 1, name: 'Butter Chicken', price: 14.90, category: 'Curries', image: 'https://images.unsplash.com/photo-1714799263303-29e7d638578a?w=400' },
