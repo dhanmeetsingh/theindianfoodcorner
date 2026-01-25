@@ -5,7 +5,7 @@ import {
   Mail,
   MapPin,
   Phone,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
@@ -147,7 +147,7 @@ export default function HomePage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1764344815366-6ccf59fb13d0?w=1080"
+                  src="/restaurant.png"
                   alt="Restaurant Innenansicht"
                   className="w-full h-[600px] object-cover"
                 />
@@ -168,15 +168,19 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-text-muted leading-relaxed">
                 <p>
-                  Seit über einem Jahrzehnt servieren wir in Stuttgart die authentischen Aromen 
-                  Nordindiens – von den geschäftigen Straßen Delhis bis zu den königlichen Küchen 
-                  Punjabs. Jedes Gericht wird mit Leidenschaft zubereitet und mit Liebe serviert.
+                  Seit über einem Jahrzehnt servieren wir in Stuttgart die
+                  authentischen Aromen Nordindiens – von den geschäftigen
+                  Straßen Delhis bis zu den königlichen Küchen Punjabs. Jedes
+                  Gericht wird mit Leidenschaft zubereitet und mit Liebe
+                  serviert.
                 </p>
                 <p>
-                  Unsere Spezialität sind traditionelle nordindische Gerichte wie Butter Chicken, 
-                  Lamb Karahi und Dal Makhani. Wir verwenden nur die feinsten Zutaten und 
-                  authentische Gewürze, die den echten Geschmack Nordindiens nach Stuttgart bringen. 
-                  Unsere langjährige Erfahrung garantiert Ihnen Qualität und Geschmack in jedem Bissen.
+                  Unsere Spezialität sind traditionelle nordindische Gerichte
+                  wie Butter Chicken, Lamb Karahi und Dal Makhani. Wir verwenden
+                  nur die feinsten Zutaten und authentische Gewürze, die den
+                  echten Geschmack Nordindiens nach Stuttgart bringen. Unsere
+                  langjährige Erfahrung garantiert Ihnen Qualität und Geschmack
+                  in jedem Bissen.
                 </p>
               </div>
               <div className="mt-8 flex items-center space-x-4">
