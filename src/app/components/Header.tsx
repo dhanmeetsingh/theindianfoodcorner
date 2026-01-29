@@ -26,8 +26,7 @@ export default function Header() {
     { name: 'Kontakt', path: '/contact' },
   ];
 
-  const whatsappNumber = '+49723894934';
-  const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}`;
+  const whatsappLink = 'https://wa.me/491723894934?text=Hallo! Ich möchte gerne einen Tisch reservieren.';
 
   return (
     <>
