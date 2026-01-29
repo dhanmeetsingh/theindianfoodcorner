@@ -171,19 +171,19 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex gap-4 text-sm">
-          <a
-            href="/impressum"
+          <Link
+            to="/impressum"
             className="text-text-muted hover:text-secondary-gold transition-colors"
           >
             Impressum
-          </a>
+          </Link>
           <span className="text-text-muted">|</span>
-          <a
-            href="/datenschutz"
+          <Link
+            to="/datenschutz"
             className="text-text-muted hover:text-secondary-gold transition-colors"
           >
             Datenschutz
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
