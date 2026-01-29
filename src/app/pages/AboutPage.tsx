@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pt-24 pb-20">
       <section className="h-96 relative flex items-center justify-center grain-texture">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1722152667178-be659e54bffc?w=1920)' }}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/restaurant.png)' }}>
           <div className="absolute inset-0 bg-bg-dark/70"></div>
         </div>
         <div className="relative z-10 text-center">

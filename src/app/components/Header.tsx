@@ -22,6 +22,7 @@ export default function Header() {
     { name: 'Unsere Geschichte', path: '/about' },
     { name: 'Speisekarte', path: '/menu' },
     { name: 'Galerie', path: '/gallery' },
+    { name: 'Allergene', path: '/allergene' },
     { name: 'Kontakt', path: '/contact' },
   ];
 

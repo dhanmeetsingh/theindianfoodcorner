@@ -16,54 +16,56 @@ const signatureDishes = [
   {
     name: "Butter Chicken",
     description:
-      "Unser Markenzeichen: Zartes Hähnchen in einer reichhaltigen Tomaten-Sahne-Sauce.",
-    price: "14,90 €",
-    spiceLevel: 2,
-    image:
-      "https://images.unsplash.com/photo-1714799263303-29e7d638578a?w=1080",
+      "Im Tandoor gegrilltes Hühnerfleisch in cremiger Butter-Tomaten-Soße – unser absoluter Klassiker.",
+    price: "13,00 €",
+    spiceLevel: 1,
+    image: "/butter-chicken.png",
     badges: ["Empfehlung", "Beliebt"],
-    dietary: ["GF"],
+  },
+  {
+    name: "Chicken Tikka Masala",
+    description:
+      "Saftige Hähnchenfiletstücke mariniert in Joghurt, im Tandoor gegrillt und in würziger Masala-Soße serviert.",
+    price: "13,00 €",
+    spiceLevel: 2,
+    image: "/chicken-tikka-masala.jpg",
+    badges: ["Chef's Pick", "Beliebt"],
+  },
+  {
+    name: "Lamm Biryani",
+    description:
+      "Duftender Basmati-Reis geschichtet mit zartem Lammfleisch, Safran und Nüssen – ein königliches Gericht.",
+    price: "14,50 €",
+    spiceLevel: 2,
+    image: "/lamm-biryani.png",
+    badges: ["Empfehlung", "Chef's Pick"],
   },
   {
     name: "Paneer Tikka",
     description:
-      "Gegrillter hausgemachter Käse, mariniert in aromatischen Gewürzen.",
-    price: "12,90 €",
-    spiceLevel: 3,
-    image:
-      "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=1080",
-    badges: ["Vegetarisch"],
-    dietary: ["V", "GF"],
-  },
-  {
-    name: "Dal Makhani",
-    description: "Langsam gekochte schwarze Linsen in Butter und Sahne.",
-    price: "10,90 €",
-    spiceLevel: 1,
-    image:
-      "https://images.unsplash.com/photo-1656356008687-abadd2e6d2b9?w=1080",
-    badges: ["Hausmannskost"],
-    dietary: ["V"],
-  },
-  {
-    name: "Prawn Masala",
-    description: "Saftige Garnelen in einem würzigen Kokos-Curry.",
-    price: "16,90 €",
-    spiceLevel: 3,
-    image:
-      "https://images.unsplash.com/photo-1586981114766-708f09a71e20?w=1080",
-    badges: ["Meeresfrüchte"],
-    dietary: ["GF"],
-  },
-  {
-    name: "Lamm Biryani",
-    description: "Duftender Basmati-Reis geschichtet mit zartem Lammfleisch.",
-    price: "15,90 €",
+      "Hausgemachter gegrillter Frischkäse mariniert in Joghurt und Gewürzen mit Tomaten, Paprika und Zwiebeln.",
+    price: "14,90 €",
     spiceLevel: 2,
-    image:
-      "https://images.unsplash.com/photo-1666190092689-e3968aa0c32c?w=1080",
-    badges: ["Empfehlung"],
-    dietary: [],
+    image: "/paneer-tikka.png",
+    badges: ["Vegetarisch", "Chef's Pick"],
+  },
+  {
+    name: "Tandoori Chicken",
+    description:
+      "Gegrillte Hähnchenschenkel, 24 Stunden in Joghurt mit Safran und indischen Gewürzen mariniert.",
+    price: "14,90 €",
+    spiceLevel: 2,
+    image: "/tandoori-chicken.png",
+    badges: ["Beliebt", "Empfehlung"],
+  },
+  {
+    name: "Malai Kofta",
+    description:
+      "Hausgemachte Käsebällchen und Kartoffeln in feiner cremiger Soße – ein vegetarisches Highlight.",
+    price: "12,90 €",
+    spiceLevel: 1,
+    image: "/malai-kofta.png",
+    badges: ["Vegetarisch", "Chef's Pick"],
   },
 ];
 
@@ -103,7 +105,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/reservations"
+                to="https://wa.me/491723894934?text=Hallo! Ich möchte gerne einen Tisch reservieren."
                 className="px-8 py-4 bg-secondary-gold text-bg-dark rounded-full hover:bg-accent-saffron transition-all duration-300 shadow-lg font-semibold"
               >
                 Tisch reservieren
@@ -191,7 +193,7 @@ export default function HomePage() {
                 />
                 <div>
                   <p className="font-accent text-lg italic text-text-light">
-                    Chef Raj Kumar
+                    Chef Ankush Soni
                   </p>
                   <p className="text-text-muted text-sm">
                     Küchenchef & Gründer
@@ -257,9 +259,7 @@ export default function HomePage() {
                   <span className="text-secondary-gold font-bold text-lg">
                     {dish.price}
                   </span>
-                  <button className="px-4 py-2 bg-secondary-gold text-bg-dark rounded-full text-sm hover:bg-accent-saffron transition-all duration-300 font-semibold">
-                    Bestellen
-                  </button>
+                
                 </div>
               </motion.div>
             ))}
@@ -373,16 +373,18 @@ export default function HomePage() {
                 </h3>
                 <div className="space-y-3 text-text-muted">
                   <div className="flex justify-between">
-                    <span>Mo - Fr</span>
-                    <span>11:00 - 23:00</span>
+                    <span>Montag</span>
+                    <span className="text-red-400 font-semibold">
+                      Geschlossen
+                    </span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Samstag</span>
-                    <span>12:00 - 00:00</span>
+                    <span>Dienstag - Freitag</span>
+                    <span>11:30 - 21:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sonntag</span>
-                    <span>12:00 - 22:00</span>
+                    <span>Samstag - Sonntag</span>
+                    <span>12:00 - 21:00</span>
                   </div>
                 </div>
               </div>

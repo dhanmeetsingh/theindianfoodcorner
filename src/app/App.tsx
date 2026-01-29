@@ -1,16 +1,18 @@
-import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import GalleryPage from './pages/GalleryPage';
-import HomePage from './pages/HomePage';
-import MenuPage from './pages/MenuPage';
-import OrderOnlinePage from './pages/OrderOnlinePage';
-import ReservationsPage from './pages/ReservationsPage';
-
-
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import CookieBanner from "./components/CookieBanner";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import AboutPage from "./pages/AboutPage";
+import AllergenPage from "./pages/AllergenPage";
+import ContactPage from "./pages/ContactPage";
+import DatenschutzPage from "./pages/DatenschutzPage";
+import GalleryPage from "./pages/GalleryPage";
+import HomePage from "./pages/HomePage";
+import ImpressumPage from "./pages/ImpressumPage";
+import MenuPage from "./pages/MenuPage";
+import OrderOnlinePage from "./pages/OrderOnlinePage";
+import ReservationsPage from "./pages/ReservationsPage";
 export default function App() {
   return (
     <Router>
@@ -25,9 +27,13 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/order" element={<OrderOnlinePage />} />
+            <Route path="/impressum" element={<ImpressumPage />} />
+            <Route path="/datenschutz" element={<DatenschutzPage />} />
+            <Route path="/allergene" element={<AllergenPage />} />
           </Routes>
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </Router>
   );
