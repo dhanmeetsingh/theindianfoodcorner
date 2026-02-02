@@ -38,7 +38,7 @@ export default function ContactPage() {
           >
             <div className="rounded-2xl h-[500px] overflow-hidden shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8753786647834!2d9.162785776622656!3d48.82914517132651"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8753786647834!2d9.162785776622656!3d48.82914517132651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799da9a645fa28b%3A0x1a8359284ce2397b!2sThe%20Indian%20Food%20corner!5e0!3m2!1sen!2sde!4v1706014774000!5m2!1sen!2sde"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
