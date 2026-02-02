@@ -100,7 +100,7 @@ export default function DatenschutzPage() {
                   <p>Schwieberdinger Str. 37</p>
                   <p>70435 Stuttgart</p>
                   <p className="mt-3">Telefon: <a href="tel:+491723894934" className="text-secondary-gold hover:underline">+49 172 389 4934</a></p>
-                  <p>E-Mail: <a href="mailto:info@spicecraft.de" className="text-secondary-gold hover:underline">info@spicecraft.de</a></p>
+                  <p>E-Mail: <a href="mailto:theindianfoodcorner17@gmail.com" className="text-secondary-gold hover:underline">theindianfoodcorner17@gmail.com</a></p>
                 </div>
                 <p className="mt-4">
                   Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen 

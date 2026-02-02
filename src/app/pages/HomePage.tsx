@@ -1,11 +1,11 @@
 import {
-  Calendar,
-  ChevronDown,
-  Leaf,
-  Mail,
-  MapPin,
-  Phone,
-  Sparkles,
+    Calendar,
+    ChevronDown,
+    Leaf,
+    Mail,
+    MapPin,
+    Phone,
+    Sparkles,
 } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
@@ -360,10 +360,10 @@ export default function HomePage() {
                 <div className="flex items-center space-x-4">
                   <Mail className="w-6 h-6 text-secondary-gold flex-shrink-0" />
                   <a
-                    href="mailto:info@spicecraft.de"
+                    href="mailto:theindianfoodcorner17@gmail.com"
                     className="hover:text-secondary-gold transition-colors"
                   >
-                    info@spicecraft.de
+                    theindianfoodcorner17@gmail.com
                   </a>
                 </div>
               </div>

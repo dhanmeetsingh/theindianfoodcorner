@@ -41,7 +41,7 @@ export default function ImpressumPage() {
               <h2 className="font-heading text-2xl text-secondary-gold mb-4">Kontakt</h2>
               <div className="space-y-2 text-text-muted">
                 <p>Telefon: <a href="tel:+491723894934" className="text-secondary-gold hover:underline">+49 172 389 4934</a></p>
-                <p>E-Mail: <a href="mailto:info@spicecraft.de" className="text-secondary-gold hover:underline">info@spicecraft.de</a></p>
+                <p>E-Mail: <a href="mailto:theindianfoodcorner17@gmail.com" className="text-secondary-gold hover:underline">theindianfoodcorner17@gmail.com</a></p>
               </div>
             </div>
 
