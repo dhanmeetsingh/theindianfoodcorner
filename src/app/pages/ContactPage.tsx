@@ -4,6 +4,7 @@ import React from "react";
 
 export default function ContactPage() {
   const phoneNumber = "+491723894934";
+  const telephoneNumber = "0711/93323865";
   const whatsappLink = `https://wa.me/${phoneNumber.replace(
     /\+/g,
     ""
@@ -86,9 +87,16 @@ export default function ContactPage() {
                     <p className="text-text-light font-semibold mb-1">Phone</p>
                     <a
                       href={`tel:${phoneNumber}`}
-                      className="text-text-muted hover:text-secondary-gold transition-colors"
+                      className="block text-text-muted hover:text-secondary-gold transition-colors"
                     >
                       {phoneNumber}
+                    </a>
+
+                    <a
+                      href={`tel:${telephoneNumber.replace(/\//g, "")}`}
+                      className="block text-text-muted hover:text-secondary-gold transition-colors"
+                    >
+                      {telephoneNumber}
                     </a>
                   </div>
                 </div>
