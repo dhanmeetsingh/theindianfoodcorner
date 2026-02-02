@@ -17,9 +17,9 @@ const menuItems = [
   { id: 11, name: 'Tandoori Chicken Salat', nameGerman: 'Tandoori Hähnchenfilet mariniert nach nordindischer Art', category: 'Starters', price: 9.90, spiceLevel: 2, veg: false, popular: true, image: '/Tandoori-Chicken-Salat.png' },
   
   // VEGETARISCHE GERICHTE (Serviert mit Reis)
-  { id: 12, name: 'Chana Masala', nameGerman: 'Kichererbsen in Curry, frischen Tomaten und Ingwer', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/chana-masala.png' },
-  { id: 13, name: 'Dal Makhani', nameGerman: 'Schwarze Linsen mit einer besonderen Gewürzmischung in Buttersoße gebraten', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 1, veg: true, popular: true, veganOnRequest: true, image: '/dal-makhani.png' },
-  { id: 14, name: 'Mixed Vegetables', nameGerman: 'Gemischtes frisches Gemüse, pikant gewürzt', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/mixed-veg.jpg' },
+  { id: 12, name: 'Chana Masala', nameGerman: 'Kichererbsen in Curry, frischen Tomaten und Ingwer', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, mittagessen: true, image: '/chana-masala.png' },
+  { id: 13, name: 'Dal Makhani', nameGerman: 'Schwarze Linsen mit einer besonderen Gewürzmischung in Buttersoße gebraten', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 1, veg: true, popular: true, veganOnRequest: true, mittagessen: true, image: '/dal-makhani.png' },
+  { id: 14, name: 'Mixed Vegetables', nameGerman: 'Gemischtes frisches Gemüse, pikant gewürzt', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, mittagessen: true, image: '/mixed-veg.jpg' },
   { id: 15, name: 'Palak Paneer', nameGerman: 'Hausgemachter Frischkäse mit Spinat und frisch gemahlenen Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 1, veg: true, chefPick: true, image: '/palak-paneer.png' },
   { id: 16, name: 'Bhindi Masala', nameGerman: 'Frisches Okragemüse mit Zwiebeln, Tomaten, Knoblauch, Ingwer und speziellen indischen Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/bhindi-masala.png' },
   { id: 17, name: 'Karahi Paneer', nameGerman: 'Hausgemachter Frischkäse mit Tomaten, Zwiebeln, Paprika und fein abgestimmten Kräutern in Karahi zubereitet', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, image: '/karahi-paneer.png' },
@@ -33,8 +33,8 @@ const menuItems = [
   { id: 25, name: 'Chole Bhatura', nameGerman: 'Kichererbsen, frittiertes Brot', category: 'Vegetarische Gerichte', price: 13.90, spiceLevel: 2, veg: true, image: '/chole-bhature.png' },
   
   // FLEISCHGERICHTE MIT HUHN (Serviert mit Reis)
-  { id: 26, name: 'Chicken Curry', nameGerman: 'Hähnchenbrustfilet zubereitet in pikanter Tomaten-Currysoße, mit frischem Koriander und Ingwer garniert', category: 'Chicken', price: 12.50, spiceLevel: 2, veg: false, popular: true, image: '/Coconut-Curry-Chicken-New-4.jpg' },
-  { id: 27, name: 'Chicken Sabzi', nameGerman: 'Hähnchenbrustfilet mit frischen Gemüse nach traditioneller indischer Art', category: 'Chicken', price: 12.50, spiceLevel: 2, veg: false, image: '/chicken-sabzi.jpg' },
+  { id: 26, name: 'Chicken Curry', nameGerman: 'Hähnchenbrustfilet zubereitet in pikanter Tomaten-Currysoße, mit frischem Koriander und Ingwer garniert', category: 'Chicken', price: 12.50, spiceLevel: 2, veg: false, popular: true, mittagessen: true, image: '/Coconut-Curry-Chicken-New-4.jpg' },
+  { id: 27, name: 'Chicken Sabzi', nameGerman: 'Hähnchenbrustfilet mit frischen Gemüse nach traditioneller indischer Art', category: 'Chicken', price: 12.50, spiceLevel: 2, veg: false, mittagessen: true, image: '/chicken-sabzi.jpg' },
   { id: 28, name: 'Chicken Korma', nameGerman: 'Hähnchenbrustfilet in Cashew-Creme, mild gekocht, garniert mit Cashewnüssen und Rosinen', category: 'Chicken', price: 13.00, spiceLevel: 1, veg: false, image: '/chicken-korma-12.jpg' },
   { id: 29, name: 'Chicken Tikka Masala', nameGerman: 'Hähnchenfiletstücke in Joghurt und Gewürzen eingelegt und nach indischer Art im Tandoor-Ofen gegrillt', category: 'Chicken', price: 13.00, spiceLevel: 2, veg: false, chefPick: true, image: '/chicken-tikka-masala.jpg' },
   { id: 30, name: 'Butter Chicken', nameGerman: 'Im Tandoor gegrilltes Hühnerfleisch in Butter-Tomaten-Soße', category: 'Chicken', price: 13.00, spiceLevel: 1, veg: false, popular: true, image: '/butter-chicken.png' },
@@ -46,8 +46,8 @@ const menuItems = [
   { id: 36, name: 'Chicken Vindaloo', nameGerman: 'Hähnchenfleisch mit Kartoffeln', category: 'Chicken', price: 13.00, spiceLevel: 3, veg: false, image: '/chicken-vindolla.jpg' },
   
   // FLEISCHGERICHTE MIT LAMM (Serviert mit Reis)
-  { id: 37, name: 'Lamm Curry', nameGerman: 'Lammfleisch in würziger Tomaten-Currysoße, zubereitet mit frischem Koriander und Ingwer garniert', category: 'Lamb', price: 13.50, spiceLevel: 2, veg: false, image: '/lamp-curry.png' },
-  { id: 38, name: 'Lamm Sabzi', nameGerman: 'Lammfleisch ohne Knochen mit verschiedenen Gemüse', category: 'Lamb', price: 13.50, spiceLevel: 2, veg: false, image: '/lamm-sabzi.png' },
+  { id: 37, name: 'Lamm Curry', nameGerman: 'Lammfleisch in würziger Tomaten-Currysoße, zubereitet mit frischem Koriander und Ingwer garniert', category: 'Lamb', price: 13.50, spiceLevel: 2, veg: false, mittagessen: true, image: '/lamp-curry.png' },
+  { id: 38, name: 'Lamm Sabzi', nameGerman: 'Lammfleisch ohne Knochen mit verschiedenen Gemüse', category: 'Lamb', price: 13.50, spiceLevel: 2, veg: false, mittagessen: true, image: '/lamm-sabzi.png' },
   { id: 39, name: 'Lamm Korma', nameGerman: 'Saftiges Lammfleisch in einer milden Soße aus Cashewnüssen und Sahne mit Cashewnüssen und Rosinen garniert', category: 'Lamb', price: 13.90, spiceLevel: 1, veg: false, image: '/lamm-korma.png' },
   { id: 40, name: 'Lamm Gosht mit Spinat', nameGerman: 'Lammfleisch mit Spinat und einer würzigen Tomaten-Currysoße zubereitet, mit frischem Ingwer garniert', category: 'Lamb', price: 13.90, spiceLevel: 2, veg: false, image: '/lamm-spinat.png' },
   { id: 41, name: 'Lamm Tikka Masala', nameGerman: 'Im Tandoor gegrillte Lammfilet Stücke in spezieller Masala-Soße', category: 'Lamb', price: 13.90, spiceLevel: 2, veg: false, chefPick: true, image: '/lamm-tikka-masala.png' },
@@ -90,14 +90,15 @@ const menuItems = [
   { id: 68, name: 'Mango Cream', nameGerman: 'Mango-Sahne-Cream', category: 'Desserts', price: 4.90, spiceLevel: 0, veg: true, image: '/mango-lassi.png' },
 ];
 
-const categories = ['All', 'Starters', 'Vegetarische Gerichte', 'Chicken', 'Lamb', 'Seafood', 'Biryani', 'Tandoor', 'Breads', 'Desserts'];
+const categories = ['All', 'Mittagessen', 'Starters', 'Vegetarische Gerichte', 'Chicken', 'Lamb', 'Seafood', 'Biryani', 'Tandoor', 'Breads', 'Desserts'];
 
 export default function MenuPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [showVegOnly, setShowVegOnly] = useState(false);
 
   const filteredItems = menuItems.filter(item => {
-    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || 
+                           (selectedCategory === 'Mittagessen' ? item.mittagessen : item.category === selectedCategory);
     const matchesVeg = !showVegOnly || item.veg;
     return matchesCategory && matchesVeg;
   });
@@ -147,6 +148,19 @@ export default function MenuPage() {
         </div>
       </div>
 
+      {/* Mittagessen Info Banner */}
+      {selectedCategory === 'Mittagessen' && (
+        <div className="container mx-auto px-4 mt-8">
+          <div className="bg-secondary-gold/10 border border-secondary-gold/30 rounded-xl p-6 text-center">
+            <h3 className="text-2xl font-accent text-secondary-gold mb-2">Mittagessen Menü</h3>
+            <p className="text-text-light text-lg">
+              <span className="font-semibold">Dienstag - Freitag</span> | <span className="font-semibold">11:30 - 14:00 Uhr</span>
+            </p>
+            <p className="text-text-muted text-sm mt-2">Außer an Feiertagen</p>
+          </div>
+        </div>
+      )}
+
       {/* Menu Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,6 +180,7 @@ export default function MenuPage() {
                 <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
                   {item.veg && <span className="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-semibold">🌱 Veg</span>}
                   {item.veganOnRequest && <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full font-semibold">🌿 Vegan auf Anfrage</span>}
+                  {item.mittagessen && <span className="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-semibold">🍽️ Mittagessen</span>}
                   {item.chefPick && <span className="px-3 py-1 bg-secondary-gold text-bg-dark text-xs rounded-full font-semibold">Chef's Pick</span>}
                   {item.popular && <span className="px-3 py-1 bg-primary-burgundy text-text-light text-xs rounded-full font-semibold">Popular</span>}
                 </div>
