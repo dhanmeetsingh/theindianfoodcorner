@@ -17,11 +17,11 @@ const menuItems = [
   { id: 11, name: 'Tandoori Chicken Salat', nameGerman: 'Tandoori Hähnchenfilet mariniert nach nordindischer Art', category: 'Starters', price: 9.90, spiceLevel: 2, veg: false, popular: true, image: '/Tandoori-Chicken-Salat.png' },
   
   // VEGETARISCHE GERICHTE (Serviert mit Reis)
-  { id: 12, name: 'Chana Masala', nameGerman: 'Kichererbsen in Curry, frischen Tomaten und Ingwer', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, image: '/chana-masala.png' },
-  { id: 13, name: 'Dal Makhani', nameGerman: 'Schwarze Linsen mit einer besonderen Gewürzmischung in Buttersoße gebraten', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 1, veg: true, popular: true, image: '/dal-makhani.png' },
-  { id: 14, name: 'Mixed Vegetables', nameGerman: 'Gemischtes frisches Gemüse, pikant gewürzt', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, image: '/mixed-veg.jpg' },
+  { id: 12, name: 'Chana Masala', nameGerman: 'Kichererbsen in Curry, frischen Tomaten und Ingwer', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/chana-masala.png' },
+  { id: 13, name: 'Dal Makhani', nameGerman: 'Schwarze Linsen mit einer besonderen Gewürzmischung in Buttersoße gebraten', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 1, veg: true, popular: true, veganOnRequest: true, image: '/dal-makhani.png' },
+  { id: 14, name: 'Mixed Vegetables', nameGerman: 'Gemischtes frisches Gemüse, pikant gewürzt', category: 'Vegetarische Gerichte', price: 11.50, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/mixed-veg.jpg' },
   { id: 15, name: 'Palak Paneer', nameGerman: 'Hausgemachter Frischkäse mit Spinat und frisch gemahlenen Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 1, veg: true, chefPick: true, image: '/palak-paneer.png' },
-  { id: 16, name: 'Bhindi Masala', nameGerman: 'Frisches Okragemüse mit Zwiebeln, Tomaten, Knoblauch, Ingwer und speziellen indischen Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, image: '/bhindi-masala.png' },
+  { id: 16, name: 'Bhindi Masala', nameGerman: 'Frisches Okragemüse mit Zwiebeln, Tomaten, Knoblauch, Ingwer und speziellen indischen Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/bhindi-masala.png' },
   { id: 17, name: 'Karahi Paneer', nameGerman: 'Hausgemachter Frischkäse mit Tomaten, Zwiebeln, Paprika und fein abgestimmten Kräutern in Karahi zubereitet', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, image: '/karahi-paneer.png' },
   { id: 18, name: 'Matar Paneer', nameGerman: 'Hausgemachter Frischkäse mit grünen Erbsen, Zwiebeln, frischen Tomaten und Gewürzen gebraten', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 2, veg: true, image: '/matar-paneer.png' },
   { id: 19, name: 'Paneer Butter Masala', nameGerman: 'Hausgemachter Frischkäse in Butter-Tomaten-Soße', category: 'Vegetarische Gerichte', price: 12.90, spiceLevel: 1, veg: true, popular: true, image: '/paneer-butter-masala.png' },
@@ -64,7 +64,7 @@ const menuItems = [
   { id: 50, name: 'Prawn Madras', nameGerman: 'Mit würziger Kokos-Curry-Soße, nach südindischer Art', category: 'Seafood', price: 14.50, spiceLevel: 3, veg: false, chefPick: true, image: '/prawn-madras.png' },
   
   // REISSPEZIALITÄTEN - BIRYANI MIT JOGHURT
-  { id: 51, name: 'Vegetable Biryani', nameGerman: 'Typisch indischer Langkorn Reis, gebraten mit Gemüse, Kaschmir Gewürzen, Mandeln, Rosinen und Cashewnüssen', category: 'Biryani', price: 12.50, spiceLevel: 2, veg: true, image: '/vegitable-biryani.png' },
+  { id: 51, name: 'Vegetable Biryani', nameGerman: 'Typisch indischer Langkorn Reis, gebraten mit Gemüse, Kaschmir Gewürzen, Mandeln, Rosinen und Cashewnüssen', category: 'Biryani', price: 12.50, spiceLevel: 2, veg: true, veganOnRequest: true, image: '/vegitable-biryani.png' },
   { id: 52, name: 'Chicken Biryani', nameGerman: 'Ein typisches Gericht aus der Mughlai Küche: Gebratener Safranreis mit Kashmirgewürzen und gewürzten Hühnerfleischstücken nach Moghlai Art', category: 'Biryani', price: 13.50, spiceLevel: 2, veg: false, popular: true, image: '/chicken-biryani.png' },
   { id: 53, name: 'Lamm Biryani', nameGerman: 'Gebratenes und gewürztes Lammfleisch in Safranreis nach indischer Art, serviert mit Nüssen', category: 'Biryani', price: 14.50, spiceLevel: 2, veg: false, chefPick: true, image: '/lamm-biryani.png' },
   { id: 54, name: 'Prawn Biryani', nameGerman: 'Krabben mit Kaschmir Gewürzen nach indischer Art, gegart in Safranreis mit Mandeln', category: 'Biryani', price: 15.50, spiceLevel: 2, veg: false, image: '/prawn-biryani.png' },
@@ -165,6 +165,7 @@ export default function MenuPage() {
                 {/* Badges */}
                 <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
                   {item.veg && <span className="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-semibold">🌱 Veg</span>}
+                  {item.veganOnRequest && <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full font-semibold">🌿 Vegan auf Anfrage</span>}
                   {item.chefPick && <span className="px-3 py-1 bg-secondary-gold text-bg-dark text-xs rounded-full font-semibold">Chef's Pick</span>}
                   {item.popular && <span className="px-3 py-1 bg-primary-burgundy text-text-light text-xs rounded-full font-semibold">Popular</span>}
                 </div>
