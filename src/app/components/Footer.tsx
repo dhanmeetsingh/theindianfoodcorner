@@ -132,7 +132,7 @@ export default function Footer() {
                   href="tel:+49723894934"
                   className="text-text-muted hover:text-secondary-gold transition-colors"
                 >
-                  +49 723 894 934
+                  +49 723 894 934 / 0711-93323865
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -141,7 +141,7 @@ export default function Footer() {
                   href="mailto:info@indianfoodcorner.de"
                   className="text-text-muted hover:text-secondary-gold transition-colors"
                 >
-                  info@indianfoodcorner.de
+                  theindianfoodcorner17@gmail.com
                 </a>
               </li>
             </ul>
