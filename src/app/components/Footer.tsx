@@ -129,10 +129,10 @@ export default function Footer() {
                   className="text-secondary-gold flex-shrink-0"
                 />
                 <a
-                  href="tel:+49723894934"
+                  href="tel:+491723894934"
                   className="text-text-muted hover:text-secondary-gold transition-colors"
                 >
-                  +49 723 894 934 / 0711-93323865
+                  +49 1723 894 934 / 0711-93323865
                 </a>
               </li>
               <li className="flex items-center space-x-3">

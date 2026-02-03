@@ -1,11 +1,11 @@
 import {
-    Calendar,
-    ChevronDown,
-    Leaf,
-    Mail,
-    MapPin,
-    Phone,
-    Sparkles,
+  Calendar,
+  ChevronDown,
+  Leaf,
+  Mail,
+  MapPin,
+  Phone,
+  Sparkles,
 } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
@@ -351,10 +351,10 @@ export default function HomePage() {
                 <div className="flex items-center space-x-4">
                   <Phone className="w-6 h-6 text-secondary-gold flex-shrink-0" />
                   <a
-                    href="tel:+49723894934"
+                    href="tel:+491723894934"
                     className="hover:text-secondary-gold transition-colors"
                   >
-                    +49 723 894 934
+                    +49 1723 894 934
                   </a>
                 </div>
                 <div className="flex items-center space-x-4">

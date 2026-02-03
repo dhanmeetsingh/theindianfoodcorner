@@ -128,6 +128,7 @@ const menuItems = [
     nameGerman: "Kichererbsen in Curry, frischen Tomaten und Ingwer",
     category: "Vegetarische Gerichte",
     price: 11.5,
+    mittagessenPrice: 7.9,
     spiceLevel: 2,
     veg: true,
     veganOnRequest: true,
@@ -141,6 +142,7 @@ const menuItems = [
       "Schwarze Linsen mit einer besonderen Gewürzmischung in Buttersoße gebraten",
     category: "Vegetarische Gerichte",
     price: 11.5,
+    mittagessenPrice: 7.9,
     spiceLevel: 1,
     veg: true,
     popular: true,
@@ -154,6 +156,7 @@ const menuItems = [
     nameGerman: "Gemischtes frisches Gemüse, pikant gewürzt",
     category: "Vegetarische Gerichte",
     price: 11.5,
+    mittagessenPrice: 8.9,
     spiceLevel: 2,
     veg: true,
     veganOnRequest: true,
@@ -288,6 +291,7 @@ const menuItems = [
       "Hähnchenbrustfilet zubereitet in pikanter Tomaten-Currysoße, mit frischem Koriander und Ingwer garniert",
     category: "Chicken",
     price: 12.5,
+    mittagessenPrice: 8.5,
     spiceLevel: 2,
     veg: false,
     popular: true,
@@ -301,6 +305,7 @@ const menuItems = [
       "Hähnchenbrustfilet mit frischen Gemüse nach traditioneller indischer Art",
     category: "Chicken",
     price: 12.5,
+    mittagessenPrice: 8.9,
     spiceLevel: 2,
     veg: false,
     mittagessen: true,
@@ -412,6 +417,7 @@ const menuItems = [
       "Lammfleisch in würziger Tomaten-Currysoße, zubereitet mit frischem Koriander und Ingwer garniert",
     category: "Lamb",
     price: 13.5,
+    mittagessenPrice: 8.9,
     spiceLevel: 2,
     veg: false,
     mittagessen: true,
@@ -423,6 +429,7 @@ const menuItems = [
     nameGerman: "Lammfleisch ohne Knochen mit verschiedenen Gemüse",
     category: "Lamb",
     price: 13.5,
+    mittagessenPrice: 9.5,
     spiceLevel: 2,
     veg: false,
     mittagessen: true,
@@ -864,6 +871,9 @@ export default function MenuPage() {
               <span className="font-semibold">11:30 - 14:00 Uhr</span>
             </p>
             <p className="text-text-muted text-sm mt-2">Außer an Feiertagen</p>
+            <p className="text-secondary-gold text-sm mt-2 font-semibold">
+              ✨ Spezielle Mittagspreise ✨
+            </p>
           </div>
         </div>
       )}
@@ -871,100 +881,113 @@ export default function MenuPage() {
       {/* Menu Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-bg-medium rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
-            >
-              <div className="relative h-48 overflow-hidden bg-bg-dark">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src =
-                      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400";
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-dark to-transparent opacity-60"></div>
+          {filteredItems.map((item, index) => {
+            const displayPrice = selectedCategory === "Mittagessen" && item.mittagessenPrice
+              ? item.mittagessenPrice
+              : item.price;
+            const hasDiscount = selectedCategory === "Mittagessen" && item.mittagessenPrice;
 
-                {/* Badges */}
-                <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
-                  {item.veg && (
-                    <span className="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-semibold">
-                      🌱 Veg
-                    </span>
-                  )}
-                  {item.veganOnRequest && (
-                    <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full font-semibold">
-                      🌿 Vegan auf Anfrage
-                    </span>
-                  )}
-                  {item.mittagessen && (
-                    <span className="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-semibold">
-                      🍽️ Mittagessen
-                    </span>
-                  )}
-                  {item.chefPick && (
-                    <span className="px-3 py-1 bg-secondary-gold text-bg-dark text-xs rounded-full font-semibold">
-                      Chef's Pick
-                    </span>
-                  )}
-                  {item.popular && (
-                    <span className="px-3 py-1 bg-primary-burgundy text-text-light text-xs rounded-full font-semibold">
-                      Popular
-                    </span>
-                  )}
-                </div>
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-bg-medium rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              >
+                <div className="relative h-48 overflow-hidden bg-bg-dark">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg-dark to-transparent opacity-60"></div>
 
-                {/* Category Badge */}
-                <div className="absolute bottom-4 right-4">
-                  <span className="px-3 py-1 bg-bg-dark/80 text-secondary-gold text-sm rounded-full">
-                    {item.category}
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-accent text-xl text-text-light">
-                    {item.name}
-                  </h3>
-                  {item.pieces && (
-                    <span className="text-xs text-text-muted bg-bg-dark px-2 py-1 rounded">
-                      {item.pieces}
-                    </span>
-                  )}
-                </div>
-                <p className="text-text-muted text-sm mb-4 line-clamp-2">
-                  {item.nameGerman}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-secondary-gold font-bold text-2xl">
-                    €{item.price.toFixed(2)}
-                  </span>
-                  <div className="flex items-center gap-1">
-                    {item.spiceLevel > 0 && (
-                      <>
-                        {[...Array(item.spiceLevel)].map((_, i) => (
-                          <span key={i} className="text-red-500 text-lg">
-                            🌶
-                          </span>
-                        ))}
-                      </>
+                  {/* Badges */}
+                  <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
+                    {item.veg && (
+                      <span className="px-3 py-1 bg-green-600 text-white text-xs rounded-full font-semibold">
+                        🌱 Veg
+                      </span>
+                    )}
+                    {item.veganOnRequest && (
+                      <span className="px-3 py-1 bg-emerald-500 text-white text-xs rounded-full font-semibold">
+                        🌿 Vegan auf Anfrage
+                      </span>
+                    )}
+                    {item.mittagessen && (
+                      <span className="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-semibold">
+                        🍽️ Mittagessen
+                      </span>
+                    )}
+                    {item.chefPick && (
+                      <span className="px-3 py-1 bg-secondary-gold text-bg-dark text-xs rounded-full font-semibold">
+                        Chef's Pick
+                      </span>
+                    )}
+                    {item.popular && (
+                      <span className="px-3 py-1 bg-primary-burgundy text-text-light text-xs rounded-full font-semibold">
+                        Popular
+                      </span>
                     )}
                   </div>
+
+                  {/* Category Badge */}
+                  <div className="absolute bottom-4 right-4">
+                    <span className="px-3 py-1 bg-bg-dark/80 text-secondary-gold text-sm rounded-full">
+                      {item.category}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-accent text-xl text-text-light">
+                      {item.name}
+                    </h3>
+                    {item.pieces && (
+                      <span className="text-xs text-text-muted bg-bg-dark px-2 py-1 rounded">
+                        {item.pieces}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-text-muted text-sm mb-4 line-clamp-2">
+                    {item.nameGerman}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-secondary-gold font-bold text-2xl">
+                        €{displayPrice.toFixed(2)}
+                      </span>
+                      {hasDiscount && (
+                        <span className="text-text-muted text-sm line-through">
+                          €{item.price.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {item.spiceLevel > 0 && (
+                        <>
+                          {[...Array(item.spiceLevel)].map((_, i) => (
+                            <span key={i} className="text-red-500 text-lg">
+                              🌶
+                            </span>
+                          ))}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {filteredItems.length === 0 && (
