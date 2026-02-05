@@ -507,7 +507,7 @@ const menuItems = [
       "Zartes Lammfleisch mit Kartoffeln in Tomaten-Currysoße, nach südindischer Art scharf zubereitet, garniert mit Kokosraspeln",
     category: "Lamb",
     price: 13.9,
-    spiceLevel: 4,
+    spiceLevel: 2,
     veg: false,
     image: "/lamm-vindalu.png",
   },
