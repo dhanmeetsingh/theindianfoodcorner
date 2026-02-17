@@ -168,7 +168,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="flex gap-4 text-sm">
           <Link
@@ -185,18 +184,19 @@ export default function Footer() {
             Datenschutz
           </Link>
         </div>
+        <p className="text-text-muted">
+          Designed & Developed by{" "}
+          <a
+            href="https://www.yourcompiler.de/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary-gold hover:underline transition-colors"
+          >
+            YourCompiler
+          </a>
+        </p>
+        ;
       </div>
     </footer>
   );
 }
-<p className="text-text-muted">
-  Designed & Developed by{" "}
-  <a
-    href="https://www.yourcompiler.de/en"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-secondary-gold hover:underline transition-colors"
-  >
-    YourCompiler
-  </a>
-</p>;
