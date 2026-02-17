@@ -192,10 +192,9 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="text-secondary-gold hover:underline transition-colors"
           >
-            YourCompiler
+            YourCompiler.de
           </a>
         </p>
-        ;
       </div>
     </footer>
   );
