@@ -189,3 +189,14 @@ export default function Footer() {
     </footer>
   );
 }
+<p className="text-text-muted">
+  Designed & Developed by{" "}
+  <a
+    href="https://www.yourcompiler.de/en"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-secondary-gold hover:underline transition-colors"
+  >
+    YourCompiler
+  </a>
+</p>;
